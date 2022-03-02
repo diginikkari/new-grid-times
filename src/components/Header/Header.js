@@ -24,7 +24,7 @@ const Header = () => {
                 <Logo />
                 <Subscribe>
                     <Button>Subscribe</Button>
-                    <a href="#">Already Subcriber?</a>
+                    <a href="#">Already a Subcriber?</a>
                 </Subscribe>
             </MainHeader>
         </header>
@@ -34,11 +34,19 @@ const Header = () => {
 const Subscribe = styled.div`
     display: none;
 
+    a {
+        text-decoration: underline;
+        font-style: italic;
+        font-size: ${14 / 16}rem;
+        color: var(--color-gray-900);
+    }
+
     @media ${QUERIES.desktopAndUp} {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-self: end;
+        gap: 8px;
     }
 `;
 
